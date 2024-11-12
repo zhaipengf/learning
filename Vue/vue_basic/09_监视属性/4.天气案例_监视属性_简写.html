@@ -58,9 +58,9 @@
 		}) */
 
 		//简写
-		/* vm.$watch('isHot',(newValue,oldValue)=>{
-			console.log('isHot被修改了',newValue,oldValue,this)
-		}) */
+		vm.$watch('isHot',function(newValue,oldValue){
+			console.log('isHot被修改了',newValue,oldValue)
+		}) 
 
 	</script>
 </html>
