@@ -23,6 +23,8 @@
 			const vm = new Vue({
 				el:'#root',
 				data:{
+					// id为001-004的每个组内数据是没有对应的set和get方法,因此不能采用直接赋值的方式(不是响应式的)
+					// 但是name,age,sex是有对应的get和set方法,可以采用直接赋值的方式(响应式)
 					persons:[
 						{id:'001',name:'马冬梅',age:30,sex:'女'},
 						{id:'002',name:'周冬雨',age:31,sex:'女'},

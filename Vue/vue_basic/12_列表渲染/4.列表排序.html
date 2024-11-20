@@ -42,6 +42,7 @@
 							return p.name.indexOf(this.keyWord) !== -1
 						})
 						//判断一下是否需要排序
+						// sort(a,b)改变原数组，这里的return是返回修改后的数组arr.a-b(升序),b-a(降序)
 						if(this.sortType){
 							arr.sort((p1,p2)=>{
 								return this.sortType === 1 ? p2.age-p1.age : p1.age-p2.age

@@ -38,6 +38,7 @@
 					keyWord:{
 						immediate:true,
 						handler(val){
+						// filter过滤之后返回一个新数组，对原数组无影响，任何‘xx’都包含‘’，return返回的是过滤的条件
 							this.filPerons = this.persons.filter((p)=>{
 								return p.name.indexOf(val) !== -1
 							})
@@ -60,6 +61,7 @@
 					]
 				},
 				computed:{
+					// 第一个return是将返回的新数组作为filePersons的属性
 					filPerons(){
 						return this.persons.filter((p)=>{
 							return p.name.indexOf(this.keyWord) !== -1

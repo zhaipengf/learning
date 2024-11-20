@@ -17,14 +17,17 @@
 			<!-- 遍历数组 -->
 			<h2>人员列表（遍历数组）</h2>
 			<ul>
+				<!-- index相当于是索引 -->
 				<li v-for="(p,index) of persons" :key="index">
 					{{p.name}}-{{p.age}}
+					{{p}}-{{index}}
 				</li>
 			</ul>
 
 			<!-- 遍历对象 -->
 			<h2>汽车信息（遍历对象）</h2>
 			<ul>
+				<!-- 先输出的是值，然后才是key -->
 				<li v-for="(value,k) of car" :key="k">
 					{{k}}-{{value}}
 				</li>
@@ -33,6 +36,7 @@
 			<!-- 遍历字符串 -->
 			<h2>测试遍历字符串（用得少）</h2>
 			<ul>
+				<!-- 和数组一样 -->
 				<li v-for="(char,index) of str" :key="index">
 					{{char}}-{{index}}
 				</li>
@@ -41,6 +45,7 @@
 			<!-- 遍历指定次数 -->
 			<h2>测试遍历指定次数（用得少）</h2>
 			<ul>
+				<!-- 和数组一样 -->
 				<li v-for="(number,index) of 5" :key="index">
 					{{index}}-{{number}}
 				</li>
